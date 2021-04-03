@@ -28,7 +28,9 @@ Vue.component('watchers', {
         console.log(e);
 
       } finally {
-        this.loading = false
+
+        setTimeout(() => (this.loading = false), 700)
+
       }
 
     }
@@ -51,14 +53,15 @@ Vue.component('watchers', {
         
         <button @click="randomUser">Obtener un nuevo usuario</button>
         <br><br>
-        <p v-show="user">Nuevo usuario: <strong>{{user}}</strong></p>
-        <p v-show="oldUser">Anterior usuario: <strong>{{oldUser}}</strong></p>
-        <div v-show="loading">
         
-            <br>
-            <p>Cargando Nuevo usuario... Espere.</p>
+        <div v-if="!loading">
+        
+            <p v-show="user">Nuevo usuario: <strong>{{user}}</strong></p>
+            <p v-show="oldUser">Anterior usuario: <strong>{{oldUser}}</strong></p>
         
         </div>
+        
+        <p v-if="loading" style="color: red">Cargando Nuevo usuario... Espere.</p>
         
     </div>
   
