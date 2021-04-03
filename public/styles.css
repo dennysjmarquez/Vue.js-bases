@@ -11,3 +11,7 @@
     box-shadow: 2px 3px 7px 2px #00000005
 
 }
+
+.jumbotron hr {
+    border-color: #fff;
+}
