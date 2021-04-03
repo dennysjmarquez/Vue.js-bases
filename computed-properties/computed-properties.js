@@ -18,7 +18,9 @@ Vue.component('computed-properties', {
     <div>
         <h2>Computed Properties</h2>
         
-        <p>computed: {<br>&nbsp; fullName() {<br>&nbsp; &nbsp; return \`\${this.name} \${this.subname}\`<br>&nbsp; }<br>}</p>
+        <p><span style="color:#9cdcfe;">computed</span>: {<br>&nbsp; <span style="color:#dcdcaa;">fullName</span>() {<br>&nbsp; &nbsp;&nbsp;<span style="color:#499cd5;">return </span><span style="color:#cd9069;">\`</span>\${
+    <span style="color:#499cd5;">this</span>.<span style="color:#9cdcfe;">name</span>} \${<span
+    style="color:#499cd5;">this</span>.<span style="color:#9cdcfe;">subname</span>}<span style="color:#cd9069;">\`</span><br><span style="color:#cd9069;">&nbsp; </span>}<br>},</p>
         
         <p>{{name}} {{subname}}</p>
         <p>Metodo (fullName) en computed property: {{fullName}}</p>
