@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="about-me.js"></script>
+
+    <title>Vue.js 2 Plugins</title>
+
+    <style>
+        .bg-light-f0f0f2 {
+            background-color: #f0f0f2;
+        }
+
+        .jumbotron {
+            max-width: 600px;
+            padding: 2em;
+            background-color: #fdfdff;
+            border-radius: 0.5em;
+            box-shadow: 2px 3px 7px 2px #00000005
+        }
+    </style>
+
+</head>
+<body class="bg-light-f0f0f2 h-100">
+
+<div id="app" style="margin: 50px auto;">
+
+    <div class="jumbotron mt-5 mb-5 mx-auto">
+        <h1>Vue.js 2 | Creación y uso de plugins.</h1>
+        <hr class="my-4">
+
+
+        <p class="lead"><strong>Presiona <b>F12</b></strong> y <span class="text-success">Abre la consola, ve la salida
+        .</span></p>
+
+        <hr class="my-4">
+
+        <p class="lead">
+            <strong>
+                <b>Código fuente, <a href="<%= redirectLink %>">haga clic aquí</a>.</b>
+            </strong>
+        </p>
+
+
+    </div>
+
+</div>
+
+<script>
+
+  new Vue({
+
+    el: '#app',
+
+    mounted() {
+
+      // Uso de plugins
+      // Uso del plugin about-me.js
+      const me = this.$me('Dennys J Marquez', 42);
+      console.log(me);
+
+    }
+  });
+
+</script>
+
+</body>
+</html>
