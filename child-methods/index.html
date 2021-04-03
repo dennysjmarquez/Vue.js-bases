@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="https://dennysjmarquez.github.io/Vue.js-bases/public/styles.css">
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="about-me.js"></script>
+    <script src="child-methods.js"></script>
 
-    <title>Vue.js 2 Plugins</title>
+    <title>Vue.js 2 Acceso a métodos de un componente hijo</title>
 
 </head>
 <body class="bg-light-f0f0f2 h-100">
@@ -16,7 +16,7 @@
 <div id="app" style="margin: 50px auto;">
 
     <div class="jumbotron mt-5 mb-5 mx-auto">
-        <h1>Vue.js 2 | Creación y uso de plugins.</h1>
+        <h1>Vue.js 2 | Acceso a métodos de un componente hijo.</h1>
         <hr class="my-4">
 
         <p class="lead"><strong>Presiona <b>F12</b></strong> y <span class="text-success">Abre la consola, ve la salida
@@ -24,9 +24,18 @@
 
         <hr class="my-4">
 
+        <p><span style="color:#808080;">&lt;</span><span style="color:#569cd6;">child-methods </span><span
+                style="color:#9cdcfe;">ref</span><span style="color:#ce9178;">="childMethods"</span><span
+                style="color:#808080;">&gt;&lt;/</span><span style="color:#569cd6;">child-methods</span><span
+                style="color:#808080;">&gt;</span></p>
+
+        <child-methods ref="childMethods"></child-methods>
+
+        <hr class="my-4">
+
         <p class="lead">
             <strong>
-                <b>Código fuente, <a href="https://github.com/dennysjmarquez/Vue.js-bases/tree/master/plugins"
+                <b>Código fuente, <a href="https://github.com/dennysjmarquez/Vue.js-bases/tree/master/child-methods"
                                      target="_blank">haga
                     clic aquí</a>.</b>
             </strong>
@@ -44,12 +53,10 @@
 
     mounted() {
 
-      // Uso de plugins
-      // Uso del plugin about-me.js
-      const me = this.$me('Dennys J Marquez', 42);
-      console.log(me);
+      this.$refs.childMethods.showCMPName();
 
     }
+
   });
 
 </script>

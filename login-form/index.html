@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="https://dennysjmarquez.github.io/Vue.js-bases/public/styles.css">
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="about-me.js"></script>
+    <script src="login-form.js"></script>
 
-    <title>Vue.js 2 Plugins</title>
+    <title>Vue.js 2 Formulario y la Directiva v-show</title>
 
 </head>
 <body class="bg-light-f0f0f2 h-100">
@@ -16,17 +16,18 @@
 <div id="app" style="margin: 50px auto;">
 
     <div class="jumbotron mt-5 mb-5 mx-auto">
-        <h1>Vue.js 2 | Creación y uso de plugins.</h1>
+
+        <h1>Vue.js 2 | Formulario y la Directiva v-show.</h1>
+
         <hr class="my-4">
 
-        <p class="lead"><strong>Presiona <b>F12</b></strong> y <span class="text-success">Abre la consola, ve la salida
-        .</span></p>
+        <login-form></login-form>
 
         <hr class="my-4">
 
         <p class="lead">
             <strong>
-                <b>Código fuente, <a href="https://github.com/dennysjmarquez/Vue.js-bases/tree/master/plugins"
+                <b>Código fuente, <a href="https://github.com/dennysjmarquez/Vue.js-bases/tree/master/login-form"
                                      target="_blank">haga
                     clic aquí</a>.</b>
             </strong>
@@ -38,19 +39,7 @@
 
 <script>
 
-  new Vue({
-
-    el: '#app',
-
-    mounted() {
-
-      // Uso de plugins
-      // Uso del plugin about-me.js
-      const me = this.$me('Dennys J Marquez', 42);
-      console.log(me);
-
-    }
-  });
+  new Vue({el: '#app'});
 
 </script>
 

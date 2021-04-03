@@ -1,0 +1,13 @@
+.bg-light-f0f0f2 {
+    background-color: #f0f0f2;
+}
+
+.jumbotron {
+    max-width: 600px;
+    padding: 2em;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0.5em;
+    box-shadow: 2px 3px 7px 2px #00000005
+
+}

@@ -6,13 +6,9 @@
     <link rel="stylesheet" href="https://dennysjmarquez.github.io/Vue.js-bases/public/styles.css">
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="emit.js"></script>
 
-    <script src="focus.js"></script>
-    <script src="change-styles.js"></script>
-
-    <script src="components/message.js"></script>
-
-    <title>Vue.js 2 Directivas a medida</title>
+    <title>Vue.js 2 Emitir eventos</title>
 
 </head>
 <body class="bg-light-f0f0f2 h-100">
@@ -20,23 +16,23 @@
 <div id="app" style="margin: 50px auto;">
 
     <div class="jumbotron mt-5 mb-5 mx-auto">
-        <h1>Vue.js 2 | Directivas a medida.</h1>
+        <h1>Vue.js 2 | Emitir eventos.</h1>
         <hr class="my-4">
 
-        v-change-styles="{backgroundColor: 'red', color: '#fff', padding: '10px'}"
-        <message v-change-styles="{backgroundColor: 'red', color: '#fff', padding:  '10px'}"></message>
+        <p class="lead"><strong>Presiona <b>F12</b></strong> y <span
+                class="text-success">Abre la consola, ve la salida.</span></p>
 
-        <hr/>
+        <hr class="my-4">
 
-        v-focus
-        <input type="text" v-focus/>
+        <emit @show-car-brand="showCarBrandFromEmitCMP"></emit>
 
         <hr class="my-4">
 
         <p class="lead">
             <strong>
-                <b>Código fuente, <a href="https://github.com/dennysjmarquez/Vue.js-bases/tree/master/directivas"
-                                     target="_blank">haga clic aquí</a>.</b>
+                <b>Código fuente, <a href="https://github.com/dennysjmarquez/Vue.js-bases/tree/master/emit"
+                                     target="_blank">haga
+                    clic aquí</a>.</b>
             </strong>
         </p>
 
@@ -48,7 +44,12 @@
 
   new Vue({
 
-    el: '#app'
+    el: '#app',
+    methods: {
+      showCarBrandFromEmitCMP($event) {
+        console.log($event);
+      }
+    }
 
   });
 
